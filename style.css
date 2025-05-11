@@ -1,0 +1,169 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfaf6;
+  }
+  
+  /* Navbar */
+  nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-left button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-right button {
+    background-color: white;
+    color: black;
+    border: none;
+    margin-left: 10px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Second Navbar (Dropdown Button Row) */
+.second-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.second-navbar .btn-group,
+.second-navbar > button {
+  margin: 0.5rem;
+}
+
+.second-navbar .btn {
+  min-width: 140px;
+  font-weight: bold;
+}
+
+/* Responsive styling for second navbar */
+@media screen and (max-width: 768px) {
+  .second-navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .second-navbar .btn-group,
+  .second-navbar > button {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+  .search-box {
+    display: flex;
+    margin-left: 10px;
+  }
+  
+  .search-box input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+    width: 150px;
+  }
+  
+  .search-box button {
+    padding: 8px 14px;
+    background-color: #5294ef;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  /* Carousel */
+  .video-background {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .overlay-text h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .overlay-text p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .overlay-text h1 {
+      font-size: 2rem;
+    }
+  
+    .overlay-text p {
+      font-size: 1rem;
+    }
+  
+    .search-box input {
+      width: 100px;
+    }
+  
+    .nav-right {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: flex-end;
+    }
+  }
+  
